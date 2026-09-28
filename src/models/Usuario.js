@@ -41,6 +41,16 @@ export const Usuario = sequelize.define(
         isUrl: true,
       },
     },
+    estadisticasGlobales: {
+      type: DataTypes.JSONB,
+      allowNull: false,
+      defaultValue: {
+        numCarrera: 0,
+        distancia: "0km",
+        mejorTiempo10k: "0",
+        mejorTiempo21k: "0",
+      },
+    },
   },
   {
     timestamps: true,

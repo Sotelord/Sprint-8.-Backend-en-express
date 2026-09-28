@@ -126,8 +126,10 @@ export async function loadInitialCarreras() {
   try {
     const count = await Carrera.count();
     if (count === 0) {
-      await Carrera.bulkCreate(initialCarreras);
+      await Carrera.bulkCreate(initialCarreras, { validate: true });
       console.log("Initial carreras loaded");
+    } else {
+      console.log("Ya hay carreras en nuestra base de datos");
     }
   } catch (error) {
     console.log(error);

@@ -65,7 +65,7 @@ export async function loadInitialUsuarios() {
   try {
     const count = await Usuario.count();
     if (count === 0) {
-      await Usuario.bulkCreate(initialUsuarios);
+      await Usuario.bulkCreate(initialUsuarios, { validate: true });
       console.log("Initial usuarios loades");
     } else {
       console.log("Ya hay usuarios en nuestra base de datos");

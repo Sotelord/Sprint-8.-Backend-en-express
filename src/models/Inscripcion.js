@@ -1,9 +1,14 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
-export const Resena = sequelize.define(
-  "resenas",
+export const Inscripcion = sequelize.define(
+  "inscripciones",
   {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     usuarioId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -20,22 +25,25 @@ export const Resena = sequelize.define(
         key: "id",
       },
     },
-    id: {
+    distanciaKm: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    resena: {
-      type: DataTypes.TEXT,
       allowNull: false,
     },
-    calificacion: {
-      type: DataTypes.FLOAT,
+    estado: {
+      type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: "inscrito",
       validate: {
-        min: 1,
-        max: 5,
+        isIn: [["inscrito", "realizada"]],
       },
+    },
+    tiempo: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    ritmo: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {
