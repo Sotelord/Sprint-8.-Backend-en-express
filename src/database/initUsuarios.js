@@ -11,7 +11,7 @@ const initialUsuarios = [
       "https://media.istockphoto.com/id/545805760/photo/man-runner-jogger-running-isolated.jpg?s=612x612&w=0&k=20&c=h_yH1K2Ou_b6fjL8At0TY2wV5rhasGFNu4sdFVZW54A=",
     estadisticasGlobales: {
       numCarrera: 12,
-      distacia: "186,4 km",
+      distancia: "186,4 km",
       mejorTiempo10k: "48:32",
       mejorTiempo21k: "1:52:40",
     },
@@ -26,7 +26,7 @@ const initialUsuarios = [
       "https://images.pexels.com/photos/3763996/pexels-photo-3763996.jpeg?cs=srgb&dl=pexels-olly-3763996.jpg&fm=jpg",
     estadisticasGlobales: {
       numCarrera: 18,
-      distacia: "254,7 km",
+      distancia: "254,7 km",
       mejorTiempo10k: "52:18",
       mejorTiempo21k: "2:01:35",
     },
@@ -40,7 +40,7 @@ const initialUsuarios = [
     fotoPerfil: null,
     estadisticasGlobales: {
       numCarrera: 9,
-      distacia: "143,2 km",
+      distancia: "143,2 km",
       mejorTiempo10k: "46:55",
       mejorTiempo21k: "1:48:20",
     },
@@ -54,7 +54,7 @@ const initialUsuarios = [
     fotoPerfil: null,
     estadisticasGlobales: {
       numCarrera: 15,
-      distacia: "221,8 km",
+      distancia: "221,8 km",
       mejorTiempo10k: "49:47",
       mejorTiempo21k: "1:56:12",
     },

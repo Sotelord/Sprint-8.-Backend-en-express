@@ -37,6 +37,15 @@ export const Resena = sequelize.define(
         max: 5,
       },
     },
+    categoriasDestacadas: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: true,
+    },
+    likes: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
   },
   {
     timestamps: true,

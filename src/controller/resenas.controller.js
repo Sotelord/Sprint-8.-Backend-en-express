@@ -68,6 +68,25 @@ export const createResena = async (req, res) => {
   }
 };
 
+export const getResenaById = async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    if (!Number.isInteger(id) || id <= 0) {
+      return res.status(400).json({
+        error: "El id de la resena debe ser un número entero positivo",
+      });
+    }
+
+    const resena = await Resena.findByPk(id);
+    if (!resena) {
+      return res.status(404).json({ error: "Reseña no encontrada" });
+    }
+    return res.json(resena);
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+
 //Tener la consulta que permite modificar la información de un review dado su id.
 export const updateResena = async (req, res) => {
   try {
@@ -139,7 +158,7 @@ export const deleteResena = async (req, res) => {
       return res.status(404).json({ error: "Reseña no encontrada" });
     }
     await resena.destroy();
-    return res.status(204); //delete ok
+    return res.json({ message: "Reseña eliminada correctamente" });
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -165,14 +184,14 @@ export const getReviewsCarreraId = async (req, res) => {
       },
       include: [
         {
-          model: Usuario,
-          as: "usuario",
-          attributes: ["usuario", "fotoPerfil"],
-        },
-        {
           model: Carrera,
           as: "carrera",
           attributes: ["nombre"],
+        },
+        {
+          model: Usuario,
+          as: "usuario",
+          attributes: ["nombre", "fotoPerfil"],
         },
       ],
       order: [["createdAt", "DESC"]],
@@ -188,11 +207,9 @@ export const getReviewsUsuarioId = async (req, res) => {
   try {
     const id = Number(req.params.id);
     if (!Number.isInteger(id) || id <= 0) {
-      return res
-        .status(400)
-        .json({
-          error: "El id del usuario debe ser un número entero positivo",
-        });
+      return res.status(400).json({
+        error: "El id del usuario debe ser un número entero positivo",
+      });
     }
 
     const usuario = await Usuario.findByPk(id);
@@ -213,7 +230,7 @@ export const getReviewsUsuarioId = async (req, res) => {
         {
           model: Usuario,
           as: "usuario",
-          attributes: ["usuario", "fotoPerfil"],
+          attributes: ["nombre", "fotoPerfil"],
         },
       ],
       order: [["createdAt", "DESC"]],

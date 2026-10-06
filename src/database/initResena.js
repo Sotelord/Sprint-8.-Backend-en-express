@@ -7,6 +7,8 @@ const initialResenas = [
     calificacion: 5,
     usuarioId: 1,
     carreraId: 1,
+    categoriasDestacadas: ["Ruta", "Organización", "Ambiente"],
+    likes: 1,
   },
   {
     resena:
@@ -14,6 +16,8 @@ const initialResenas = [
     calificacion: 4,
     usuarioId: 1,
     carreraId: 2,
+    categoriasDestacadas: ["Organización", "Kit"],
+    likes: 2,
   },
   {
     resena:
@@ -21,6 +25,8 @@ const initialResenas = [
     calificacion: 3.5,
     usuarioId: 2,
     carreraId: 3,
+    categoriasDestacadas: ["Hidratación", "Seguridad"],
+    likes: 3,
   },
   {
     resena:
@@ -28,6 +34,8 @@ const initialResenas = [
     calificacion: 4.8,
     usuarioId: 3,
     carreraId: 4,
+    categoriasDestacadas: ["Precio"],
+    likes: 4,
   },
   {
     resena:
@@ -35,6 +43,7 @@ const initialResenas = [
     calificacion: 3,
     usuarioId: 2,
     carreraId: 5,
+    likes: 5,
   },
   // ---------- Reseñas nuevas ----------
   {
@@ -43,6 +52,8 @@ const initialResenas = [
     calificacion: 4.5,
     usuarioId: 1,
     carreraId: 1,
+    categoriasDestacadas: ["Ambiente", "Ruta", "Organización"],
+    likes: 6,
   },
   {
     resena:
@@ -50,6 +61,8 @@ const initialResenas = [
     calificacion: 4.7,
     usuarioId: 1,
     carreraId: 2,
+    categoriasDestacadas: ["Organización", "Seguridad"],
+    likes: 7,
   },
   {
     resena:
@@ -57,6 +70,8 @@ const initialResenas = [
     calificacion: 3.8,
     usuarioId: 1,
     carreraId: 3,
+    categoriasDestacadas: ["Ruta", "Organización"],
+    likes: 8,
   },
   {
     resena:
@@ -64,6 +79,8 @@ const initialResenas = [
     calificacion: 5,
     usuarioId: 2,
     carreraId: 4,
+    categoriasDestacadas: ["Ruta", "Organización"],
+    likes: 9,
   },
   {
     resena:
@@ -71,6 +88,8 @@ const initialResenas = [
     calificacion: 3.9,
     usuarioId: 2,
     carreraId: 5,
+    categoriasDestacadas: ["Organización", "Kit"],
+    likes: 10,
   },
   {
     resena:
@@ -78,6 +97,7 @@ const initialResenas = [
     calificacion: 4.2,
     usuarioId: 2,
     carreraId: 1,
+    likes: 11,
   },
   {
     resena:
@@ -85,6 +105,8 @@ const initialResenas = [
     calificacion: 4,
     usuarioId: 3,
     carreraId: 1,
+    categoriasDestacadas: ["Hidratación", "Seguridad"],
+    likes: 12,
   },
   {
     resena:
@@ -92,6 +114,8 @@ const initialResenas = [
     calificacion: 4.9,
     usuarioId: 3,
     carreraId: 2,
+    categoriasDestacadas: ["Ambiente", "Organización"],
+    likes: 13,
   },
   {
     resena:
@@ -99,6 +123,7 @@ const initialResenas = [
     calificacion: 3.2,
     usuarioId: 3,
     carreraId: 2,
+    likes: 14,
   },
   {
     resena:
@@ -106,6 +131,8 @@ const initialResenas = [
     calificacion: 4.1,
     usuarioId: 3,
     carreraId: 3,
+    categoriasDestacadas: ["Organización", "Kit"],
+    likes: 15,
   },
 ];
 

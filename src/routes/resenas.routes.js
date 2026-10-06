@@ -6,6 +6,7 @@ import {
   deleteResena,
   getReviewsCarreraId,
   getReviewsUsuarioId,
+  getResenaById,
 } from "../controller/resenas.controller.js";
 
 const router = Router();
@@ -24,5 +25,8 @@ router.delete("/resenas/:id", deleteResena);
 
 //PUT /resenas/:id
 router.put("/resenas/:id", updateResena);
+
+//GET /resenas/:id
+router.get("/resenas/:id", getResenaById);
 
 export default router;
